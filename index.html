@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bulb Toggler</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+            min-height: 97vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-container {
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            height: 450px;
+            width: 400px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px 1px #333333;
+        }
+
+        .app-title {
+            text-align: center;
+            padding: 20px;
+            color: #ff758c;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .bulb {
+            height: 250px;
+            margin-left: 70px;
+
+        }
+
+        .btn-container {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+
+        .btn {
+            padding: 8px 30px;
+            width: 100px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+        }
+
+        .btn:hover {
+            box-shadow: 0px 0px 8px 1px #ff758c;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1 class="app-title">Bulb Toggler</h1>
+        <img src="./bulb.off.png" class="bulb" id="bulb">
+
+        <div class="btn-container">
+            <button onClick="bulbOn()" class="btn">ON</button>
+            <button onclick=" bulbOff()" class="btn">OFF</button>
+        </div>
+    </div>
+
+
+    <script>
+        function bulbOn() {
+            const bulbimg = document.getElementById('bulb');
+            bulbimg.src = "./bulb-on.png";
+
+        }
+
+        function bulbOff() {
+            const bulbimg = document.getElementById('bulb');
+            bulbimg.src = "./bulb.off.png";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
